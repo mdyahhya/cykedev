@@ -80,7 +80,8 @@ const Hero: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          viewport={{ once: true }} 
           style={{ 
             textAlign: 'center', 
             marginBottom: isMobile ? '1rem' : '2rem' 
@@ -103,7 +104,7 @@ const Hero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             style={{
               display: 'flex',
               gap: isMobile ? '0.75rem' : '1rem',
@@ -181,7 +182,7 @@ const Hero: React.FC = () => {
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.6 }}
+  transition={{ duration: 0.4, delay: 0.6 }}
   style={{ 
     textAlign: 'center', 
     maxWidth: isMobile ? '100%' : '800px', 
@@ -221,7 +222,7 @@ const Hero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.4, delay: 0.7 }}
             style={{ marginBottom: isMobile ? '1.5rem' : '2rem' }}
           >
             <button
@@ -247,7 +248,7 @@ const Hero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.8 }}
             style={{
               display: 'flex',
               gap: isMobile ? '0.5rem' : '1rem',
@@ -310,7 +311,7 @@ const Hero: React.FC = () => {
               gap: '0.5rem',
               cursor: 'pointer'
             }}
-            onClick={() => scrollToSection('dashboard')}
+            onClick={() => scrollToSection('ProductsPage')}
           >
             <p style={{ fontSize: '0.75rem', color: '#6B7280', fontWeight: 600 }}>
               Scroll to explore
