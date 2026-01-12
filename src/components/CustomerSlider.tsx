@@ -306,23 +306,7 @@ const CustomerSlider: React.FC = () => {
           👆 Swipe or use arrows to see more customer stories
         </motion.p>
 
-        {/* Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          style={{
-            marginTop: '2rem',
-            padding: '1.5rem',
-            background: '#FEF3C7',
-            border: '1px solid #FCD34D',
-            borderRadius: '0.75rem',
-            textAlign: 'center'
-          }}
-        >
-          
-        </motion.div>
+       
       </div>
     </section>
   );
