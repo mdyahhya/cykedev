@@ -67,7 +67,7 @@ const Header: React.FC = () => {
             {/* Logo & Brand Name */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               {/* Circular C Logo */}
-              {/* <div 
+              <div 
   style={{
     width: '48px',
     height: '48px',
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 >
   <img 
-    src="/cykedev.png" 
+    src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/cykedevlogo.png" 
     alt="CYKED Logo" 
     style={{
       width: '100%',
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
       objectFit: 'contain'
     }}
   />
-</div> */}
+</div>
 
               
               {/* Brand Name */}
