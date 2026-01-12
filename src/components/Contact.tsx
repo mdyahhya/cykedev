@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(30, 58, 138, 0.15)' }}
+            whileHover={{ scale: 1.02 }}
             style={{
               background: 'white',
               border: '2px solid #E5E7EB',
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(30, 58, 138, 0.15)' }}
+            whileHover={{ scale: 1.02 }}
             style={{
               background: 'white',
               border: '2px solid #E5E7EB',
@@ -244,7 +244,7 @@ const Contact: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+            
               style={{
                 width: '70px',
                 height: '70px',
@@ -268,9 +268,10 @@ const Contact: React.FC = () => {
             <motion.a
               href="https://instagram.com/cykedev"
               target="_blank"
+              
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+             
               style={{
                 width: '70px',
                 height: '70px',
@@ -296,7 +297,7 @@ const Contact: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+             
               style={{
                 width: '70px',
                 height: '70px',
