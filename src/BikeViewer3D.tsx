@@ -5,9 +5,10 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 interface BikeViewer3DProps {
   modelPath: string;
+  isMobile?: boolean;  // Add this line
 }
 
-const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath }) => {
+const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath, isMobile = false }) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
