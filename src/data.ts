@@ -245,7 +245,7 @@ const KIT_SPECS: Specification[] = [
   },
   { 
     label: 'MOQ (7 pieces)', 
-    value: 'US$ 9,900', 
+    value: '₹9,900', 
     icon: 'bulk',
     category: 'warranty'
   },
@@ -330,7 +330,7 @@ export const PRODUCTS: Record<ProductType, Product> = {
     tagline: 'Convert Your Bike to Electric',
     description: 'Transform any regular bicycle into an electric bike with our premium conversion kit. Best quality tested components.',
     price: '₹11,900',
-    priceUSD: 'US$ 9,900 (MOQ: 7 pieces)',
+    priceUSD: '₹9,900 (MOQ: 7 pieces)',
     moq: 7,
     modelPath: '/models/redbike.glb',
     specifications: KIT_SPECS,
@@ -360,28 +360,28 @@ export const PRODUCTS: Record<ProductType, Product> = {
 export const CUSTOMER_IMAGES = [
   {
     id: 1,
-    src: '/customer1.jpg', // Add your images to public/images/
+    src: '/images/customer1.jpg', // Add your images to public/images/
     alt: 'Happy customer riding CYKED e-bike',
     caption: 'Happy customer riding CYKED e-bike',
     // testimonial: 'Best decision for daily commute!'
   },
   {
     id: 2,
-    src: '/customer2.jpg',
+    src: '/images/customer2.jpg',
     alt: 'Customer using CYKED for grocery shopping',
     caption: 'Perfect for the whole family',
     // testimonial: 'Eco-friendly and economical!'
   },
   {
     id: 3,
-    src: '/customer3.jpg',
+    src: '/images/customer3.jpg',
     alt: 'Customer on morning ride',
     caption: 'Customer on morning ride',
     // testimonial: 'Smooth and powerful performance!'
   },
   {
     id: 4,
-    src: '/customer4.jpg',
+    src: '/images/customer4.jpg',
     alt: 'Family using CYKED bikes',
     caption: 'Best decision for daily commute!',
     // testimonial: 'Perfect for the whole family!'
@@ -405,5 +405,3 @@ export const getProductById = (id: ProductType): Product => {
 export const getSpecsByCategory = (product: Product, category: Specification['category']) => {
   return product.specifications.filter(spec => spec.category === category);
 };
-
-
