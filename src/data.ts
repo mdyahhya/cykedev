@@ -360,28 +360,28 @@ export const PRODUCTS: Record<ProductType, Product> = {
 export const CUSTOMER_IMAGES = [
   {
     id: 1,
-    src: '/images/customer1.jpg', // Add your images to public/images/
+    src: 'customer1.jpg', // Add your images to public/images/
     alt: 'Happy customer riding CYKED e-bike',
     caption: 'Happy customer riding CYKED e-bike',
     // testimonial: 'Best decision for daily commute!'
   },
   {
     id: 2,
-    src: '/images/customer2.jpg',
+    src: 'customer2.jpg',
     alt: 'Customer using CYKED for grocery shopping',
     caption: 'Perfect for the whole family',
     // testimonial: 'Eco-friendly and economical!'
   },
   {
     id: 3,
-    src: '/images/customer3.jpg',
+    src: 'customer3.jpg',
     alt: 'Customer on morning ride',
     caption: 'Customer on morning ride',
     // testimonial: 'Smooth and powerful performance!'
   },
   {
     id: 4,
-    src: '/images/customer4.jpg',
+    src: 'customer4.jpg',
     alt: 'Family using CYKED bikes',
     caption: 'Best decision for daily commute!',
     // testimonial: 'Perfect for the whole family!'
@@ -405,3 +405,4 @@ export const getProductById = (id: ProductType): Product => {
 export const getSpecsByCategory = (product: Product, category: Specification['category']) => {
   return product.specifications.filter(spec => spec.category === category);
 };
+
