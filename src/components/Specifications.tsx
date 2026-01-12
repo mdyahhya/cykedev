@@ -7,7 +7,7 @@ import { PRODUCTS} from '../data';
 // SVG ICON COMPONENT
 // ============================================
 
-const SpecIcon: React.FC<{ iconName: string }> = ({ iconName }) => {
+const SpecIcon: React.FC<{ iconName: string }> = React.memo(({ iconName }) => {
   const iconStyle = { width: '100%', height: '100%' };
   
   switch (iconName) {
@@ -176,7 +176,7 @@ const SpecIcon: React.FC<{ iconName: string }> = ({ iconName }) => {
         </svg>
       );
   }
-};
+});
 
 // ============================================
 // SPECIFICATIONS COMPONENT
@@ -313,9 +313,9 @@ const Specifications: React.FC = () => {
 
         {/* Specifications Grid */}
         <motion.div
-          key={activeProduct + selectedCategory}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           style={{
             display: 'grid',
@@ -330,10 +330,8 @@ const Specifications: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: '0 12px 30px rgba(30, 58, 138, 0.15)'
-              }}
+              whileHover={{ scale: 1.02 }}
+
               style={{
                 background: 'white',
                 border: '1px solid #E5E7EB',
