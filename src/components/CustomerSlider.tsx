@@ -109,15 +109,16 @@ const CustomerSlider: React.FC = () => {
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
-              onDragEnd={(_e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
+             onDragEnd={(_e: any, { offset, velocity }: any) => {
+  const swipe = swipePower(offset.x, velocity.x);
 
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
+  if (swipe < -swipeConfidenceThreshold) {
+    paginate(1);
+  } else if (swipe > swipeConfidenceThreshold) {
+    paginate(-1);
+  }
+}}
+
               style={{
                 position: 'absolute',
                 width: '100%',
