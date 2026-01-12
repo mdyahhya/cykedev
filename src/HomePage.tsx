@@ -10,25 +10,25 @@ import Contact from './components/Contact';
 const CUSTOMER_IMAGES = [
   {
     id: 1,
-    src: '/images/customer1.jpg',
+    src: 'https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/customer1.jpg',
     alt: 'Happy customer riding CYKED e-bike',
     caption: 'Happy customer riding CYKED e-bike',
   },
   {
     id: 2,
-    src: '/images/customer2.jpg',
+    src: 'https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/customer2.jpg',
     alt: 'Customer using CYKED for grocery shopping',
     caption: 'Perfect for the whole family',
   },
   {
     id: 3,
-    src: '/images/customer3.jpg',
+    src: 'https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/customer3.jpg',
     alt: 'Customer on morning ride',
     caption: 'Customer on morning ride',
   },
   {
     id: 4,
-    src: '/images/customer4.jpg',
+    src: 'https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/customer4.jpg',
     alt: 'Family using CYKED bikes',
     caption: 'Best decision for daily commute!',
   }
@@ -196,3 +196,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
