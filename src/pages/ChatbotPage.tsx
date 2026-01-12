@@ -267,12 +267,28 @@ const ChatbotPage: React.FC = () => {
         flexShrink: 0
       }}>
         <div>
-          <h1 style={{ margin: 0, fontSize: '1.75rem', fontWeight: '600' }}>
-            🚲 CYKED AI Assistant
-          </h1>
-          <p style={{ margin: '0.5rem 0 0 0', opacity: 0.9, fontSize: '0.95rem' }}>
-            Your e-bike information companion
-          </p>
+          <h1
+  style={{
+    margin: 0,
+    fontSize: '1.2rem',      // smaller than 1.75rem
+    fontWeight: 600,
+    color: '#FFFFFF',        // pure white (more visible on blue)
+  }}
+>
+  CYKED Assistant
+</h1>
+
+<p
+  style={{
+    margin: '0.25rem 0 0 0', // reduce top margin
+    opacity: 0.9,
+    fontSize: '0.8rem',      // smaller subtitle
+    color: '#E5E7EB',        // light grey for subtitle
+  }}
+>
+  Your e-bike info companion
+</p>
+
         </div>
 
         {/* Buttons Container */}
