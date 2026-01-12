@@ -182,7 +182,7 @@ const CustomerSlider: React.FC = () => {
                     color: '#1E3A8A',
                     fontWeight: 700
                   }}>
-                    — {CUSTOMER_IMAGES[currentIndex].caption}
+                    {CUSTOMER_IMAGES[currentIndex].caption}
                   </p>
                 </div>
               </div>
