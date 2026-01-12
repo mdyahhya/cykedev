@@ -109,15 +109,16 @@ const CustomerSlider: React.FC = () => {
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
-             onDragEnd={(_e: any, { offset, velocity }: any) => {
-  const swipe = swipePower(offset.x, velocity.x);
+           onDragEnd={(_e: any, { offset, velocity }: any) => {
+              const swipe = swipePower(offset.x, velocity.x);
 
-  if (swipe < -swipeConfidenceThreshold) {
-    paginate(1);
-  } else if (swipe > swipeConfidenceThreshold) {
-    paginate(-1);
-  }
-}}
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+
 
               style={{
                 position: 'absolute',
@@ -320,10 +321,7 @@ const CustomerSlider: React.FC = () => {
             textAlign: 'center'
           }}
         >
-          <p style={{ color: '#92400E', fontSize: '0.875rem', fontWeight: 600 }}>
-            📸 <strong>Note:</strong> Add your actual customer images to <code>/public/images/</code> folder 
-            (customer1.jpg, customer2.jpg, customer3.jpg, customer4.jpg)
-          </p>
+          
         </motion.div>
       </div>
     </section>
