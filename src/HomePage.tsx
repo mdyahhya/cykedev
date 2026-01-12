@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
     padding: '0 1rem'
   }}>
     <img 
-      src="/images/redbike.png" 
+      src="https://drive.google.com/file/d/1FIbATVQW4JWsSkvN60JzF7dcjoOuElvN/view?usp=drivesdk" 
       alt="Red CYKED Bike" 
       style={{ 
         width: '100%', 
@@ -81,6 +81,7 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
 
 
 
