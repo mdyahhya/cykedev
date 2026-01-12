@@ -64,10 +64,12 @@ renderer.shadowMap.enabled = true;
     scene.add(frontLight);
 
     // Controls
-   const controls = new OrbitControls(camera, renderer.domElement);
+  const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
-controls.enableZoom = false;
+controls.enableZoom = true; // Enable zoom
+controls.minDistance = isMobile ? 1.2 : 0.8; // Minimum zoom
+controls.maxDistance = isMobile ? 3.5 : 2.5; // Maximum zoom
 controls.autoRotate = true;
 controls.autoRotateSpeed = 2;
 controls.target.set(0, isMobile ? -0.2 : -0.3, 0);
