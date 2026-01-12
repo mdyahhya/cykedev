@@ -1,16 +1,13 @@
-// import React from 'react';
 import { AppProvider } from './context/AppContext';
 import HomePage from './HomePage';
-
-// ============================================
-// APP COMPONENT
-// ============================================
+import ChatbotButton from './components/ChatbotButton';  // Add this
 
 function App() {
   return (
     <AppProvider>
       <div className="App">
         <HomePage />
+        <ChatbotButton />  {/* Add this */}
       </div>
     </AppProvider>
   );
