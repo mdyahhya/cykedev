@@ -29,6 +29,7 @@ const Header: React.FC = () => {
     { label: 'SPECIFICATIONS', action: () => scrollToSection('specs') },
     { label: 'CONVERSION KIT', action: () => scrollToSection('conversion-kit') },
     { label: 'FEATURES', action: () => scrollToSection('features') },
+    { label: 'CUSTOMERS', action: () => scrollToSection('customers') },
     { label: 'CONTACT', action: () => scrollToSection('contact') }
   ];
 
