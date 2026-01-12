@@ -139,15 +139,14 @@ const Hero: React.FC = () => {
         {/* 3D Bike Viewer */}
         <motion.div
   style={{
-    width: isMobile ? '100vw' : '100%',
-    maxWidth: isMobile ? '100vw' : '1000px',
+    width: isMobile ? 'calc(100vw - 2rem)' : '100%',
+    maxWidth: isMobile ? 'calc(100vw - 2rem)' : '1000px',
     height: isMobile ? '400px' : '700px',
-    margin: '0 auto 2rem',
-    marginLeft: isMobile ? '-1rem' : 'auto',
-    marginRight: isMobile ? '-1rem' : 'auto',
+    margin: isMobile ? '0 1rem 2rem' : '0 auto 3rem',
     position: 'relative'
   }}
 >
+
 
 
 
@@ -158,17 +157,19 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* Text Content Below 3D Model */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          style={{ 
-            textAlign: 'center', 
-            maxWidth: isMobile ? '100%' : '800px', 
-            margin: '0 auto',
-            padding: isMobile ? '0 0.5rem' : '0'
-          }}
-        >
+        {/* Text Content Below 3D Model */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  style={{ 
+    textAlign: 'center', 
+    maxWidth: isMobile ? '100%' : '800px', 
+    margin: '0 auto',
+    padding: isMobile ? '0 1rem' : '0'
+  }}
+>
+
           {/* Main Tagline */}
           <h2
             style={{
