@@ -137,27 +137,44 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* 3D Bike Viewer */}
-<motion.div
-  style={{
-    width: isMobile ? '100vw' : '100%',
-    maxWidth: isMobile ? '100vw' : '1000px',
-    height: isMobile ? '400px' : '700px',
-    margin: isMobile ? '0 0 2rem' : '0 auto 3rem',
-    position: 'relative',
-    left: isMobile ? '50%' : '0',
-    transform: isMobile ? 'translateX(-50%)' : 'none'
-  }}
->
+{isMobile ? (
+  <div style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', marginBottom: '2rem' }}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, delay: 0.3 }}
+      style={{
+        width: '100%',
+        height: '400px',
+        position: 'relative'
+      }}
+    >
+      <BikeViewer3D 
+        modelPath={currentProduct.modelPath} 
+        isMobile={isMobile}
+      />
+    </motion.div>
+  </div>
+) : (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1, delay: 0.3 }}
+    style={{
+      width: '100%',
+      maxWidth: '1000px',
+      height: '700px',
+      margin: '0 auto 3rem',
+      position: 'relative'
+    }}
+  >
+    <BikeViewer3D 
+      modelPath={currentProduct.modelPath} 
+      isMobile={isMobile}
+    />
+  </motion.div>
+)}
 
-
-
-
-
-          <BikeViewer3D 
-            modelPath={currentProduct.modelPath} 
-            isMobile={isMobile}
-          />
-        </motion.div>
 
         {/* Text Content Below 3D Model */}
         {/* Text Content Below 3D Model */}
