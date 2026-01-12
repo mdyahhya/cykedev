@@ -166,15 +166,7 @@ const CustomerSlider: React.FC = () => {
                   maxWidth: '80%',
                   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
                 }}>
-                  <p style={{
-                    fontSize: '1.125rem',
-                    fontStyle: 'italic',
-                    color: '#000',
-                    marginBottom: '0.5rem',
-                    fontWeight: 600
-                  }}>
-                    "{CUSTOMER_IMAGES[currentIndex].testimonial}"
-                  </p>
+                  
                   <p style={{
                     fontSize: '0.875rem',
                     color: '#1E3A8A',
