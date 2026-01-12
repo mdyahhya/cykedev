@@ -362,28 +362,28 @@ export const CUSTOMER_IMAGES = [
     id: 1,
     src: '/images/customer1.jpg', // Add your images to public/images/
     alt: 'Happy customer riding CYKED e-bike',
-    caption: 'Rakesh Kumar - Mumbai',
-    testimonial: 'Best decision for daily commute!'
+    caption: 'Happy customer riding CYKED e-bike',
+    // testimonial: 'Best decision for daily commute!'
   },
   {
     id: 2,
     src: '/images/customer2.jpg',
     alt: 'Customer using CYKED for grocery shopping',
-    caption: 'Priya Sharma - Pune',
-    testimonial: 'Eco-friendly and economical!'
+    caption: 'Perfect for the whole family',
+    // testimonial: 'Eco-friendly and economical!'
   },
   {
     id: 3,
     src: '/images/customer3.jpg',
     alt: 'Customer on morning ride',
-    caption: 'Amit Patel - Nashik',
-    testimonial: 'Smooth and powerful performance!'
+    caption: 'Customer on morning ride',
+    // testimonial: 'Smooth and powerful performance!'
   },
   {
     id: 4,
     src: '/images/customer4.jpg',
     alt: 'Family using CYKED bikes',
-    caption: 'Singh Family - Delhi',
+    caption: 'Best decision for daily commute!',
     testimonial: 'Perfect for the whole family!'
   }
 ];
