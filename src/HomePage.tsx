@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
       }} 
     />
     <img 
-      src="bluebike.png" 
+      src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/bluebike.png" 
       
       alt="Blue CYKED Bike" 
       style={{ 
@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
       }} 
     />
     <img 
-      src="/images/orangebike.png" 
+      src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/orangebike.png" 
       alt="Orange CYKED Bike" 
       style={{ 
         width: '100%', 
@@ -81,6 +81,7 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
 
 
 
