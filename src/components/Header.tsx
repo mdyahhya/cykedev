@@ -6,8 +6,8 @@ import { COMPANY_INFO } from '../data';
 // ============================================
 // HEADER COMPONENT - HORIZONTAL MENU
 // ============================================
-
 const Header: React.FC = () => {
+
   const { scrollToSection } = useApp();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,8 +24,8 @@ const Header: React.FC = () => {
 
   // Navigation items
   const navItems = [
-    { label: 'HOME', action: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
-    { label: 'PRODUCTS', action: () => scrollToSection('dashboard') },
+  { label: 'HOME', action: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
+{ label: 'PRODUCTS', action: () => scrollToSection('products') },
     { label: 'SPECIFICATIONS', action: () => scrollToSection('specs') },
     { label: 'CONVERSION KIT', action: () => scrollToSection('conversion-kit') },
     { label: 'FEATURES', action: () => scrollToSection('features') },
