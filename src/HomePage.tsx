@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
       }} 
     />
     <img 
-      src="images/bluebike.png" 
+      src="public/models/bluebike.png" 
       
       alt="Blue CYKED Bike" 
       style={{ 
@@ -81,4 +81,5 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
 
