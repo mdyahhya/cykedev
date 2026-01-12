@@ -33,7 +33,7 @@ const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath, isMobile = false
 camera.position.set(
   isMobile ? 0.7 : 0.5,
   isMobile ? 0.2 : 0.1,
-  isMobile ? 3.0 : 1
+  isMobile ? 2.7 : 1
 );
 
 
