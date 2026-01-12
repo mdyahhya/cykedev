@@ -67,24 +67,31 @@ const Header: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               {/* Circular C Logo */}
               <div 
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: 900,
-                  fontSize: '1.5rem',
-                  color: 'white',
-                  boxShadow: '0 4px 12px rgba(30, 58, 138, 0.3)',
-                  cursor: 'pointer'
-                }}
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                C
-              </div>
+  style={{
+    width: '48px',
+    height: '48px',
+    borderRadius: '50%',
+    background: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0 4px 12px rgba(30, 58, 138, 0.3)',
+    cursor: 'pointer',
+    padding: '8px'
+  }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>
+  <img 
+    src="/cykedev.png" 
+    alt="CYKED Logo" 
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    }}
+  />
+</div>
+
               
               {/* Brand Name */}
               <div>
