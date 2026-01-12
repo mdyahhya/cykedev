@@ -250,7 +250,7 @@ const Features: React.FC = () => {
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <motion.button
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              
               onClick={() => document.getElementById('specs')?.scrollIntoView({ behavior: 'smooth' })}
               style={{
                 background: 'white',
@@ -268,7 +268,7 @@ const Features: React.FC = () => {
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+             
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               style={{
                 background: 'rgba(255, 255, 255, 0.2)',
