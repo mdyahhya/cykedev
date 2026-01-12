@@ -23,13 +23,18 @@ const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath, isMobile = false
     scene.background = null; // Transparent background
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(
-      70,
-      mountRef.current.clientWidth / mountRef.current.clientHeight,
-      0.1,
-      1000
-    );
- camera.position.set(0.5, 0.1, 1);  // Changed from (0.4, 0, 0.6)
+   const camera = new THREE.PerspectiveCamera(
+  isMobile ? 50 : 70,
+  mountRef.current.clientWidth / mountRef.current.clientHeight,
+  0.1,
+  1000
+);
+camera.position.set(
+  isMobile ? 0.8 : 0.5,
+  isMobile ? 0.2 : 0.1,
+  isMobile ? 2.2 : 1
+);
+
 
 
 
@@ -62,7 +67,7 @@ controls.dampingFactor = 0.05;
 controls.enableZoom = false;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 2;
-controls.target.set(0, -0.3, 0); // ← ADD THIS
+controls.target.set(0, isMobile ? -0.2 : -0.3, 0);
 controls.update();                // ← ADD THIS
 controlsRef.current = controls;
 
@@ -72,14 +77,20 @@ controlsRef.current = controls;
     loader.load(
       modelPath,
       (gltf) => {
-        const model = gltf.scene;
-        
-        // Center model
-        const box = new THREE.Box3().setFromObject(model);
-        const center = box.getCenter(new THREE.Vector3());
-        model.position.sub(center);
-        
-        scene.add(model);
+       const model = gltf.scene;
+
+// Responsive scale
+if (isMobile) {
+  model.scale.set(0.85, 0.85, 0.85);
+}
+
+// Center model
+const box = new THREE.Box3().setFromObject(model);
+const center = box.getCenter(new THREE.Vector3());
+model.position.sub(center);
+
+scene.add(model);
+
         setLoading(false);
       },
       undefined,
