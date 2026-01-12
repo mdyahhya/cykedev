@@ -24,7 +24,7 @@ const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath, isMobile = false
 
     // Camera
  const camera = new THREE.PerspectiveCamera(
-  isMobile ? 55 : 70,
+  isMobile ? 65 : 70,
   mountRef.current.clientWidth / mountRef.current.clientHeight,
   0.1,
   1000
