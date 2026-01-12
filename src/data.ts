@@ -384,7 +384,7 @@ export const CUSTOMER_IMAGES = [
     src: '/images/customer4.jpg',
     alt: 'Family using CYKED bikes',
     caption: 'Best decision for daily commute!',
-    testimonial: 'Perfect for the whole family!'
+    // testimonial: 'Perfect for the whole family!'
   }
 ];
 
