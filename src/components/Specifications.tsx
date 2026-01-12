@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useApp } from '../context/AppContext';
-import { PRODUCTS, Specification } from '../data';
+import { PRODUCTS} from '../data';
 
 // ============================================
 // SVG ICON COMPONENT
