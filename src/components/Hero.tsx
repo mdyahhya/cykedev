@@ -136,17 +136,18 @@ const Hero: React.FC = () => {
 
         {/* 3D Bike Viewer */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          style={{
-            width: '100%',
-            maxWidth: isMobile ? '100%' : '1000px',
-            height: isMobile ? '400px' : '700px',
-            margin: isMobile ? '0 auto 2rem' : '0 auto 3rem',
-            position: 'relative'
-          }}
-        >
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1, delay: 0.3 }}
+  style={{
+    width: '100%',
+    maxWidth: isMobile ? '100%' : '1000px',
+    height: isMobile ? '400px' : '700px',
+    margin: isMobile ? '0 -1rem 2rem' : '0 auto 3rem', // Negative margin removes side padding
+    position: 'relative'
+  }}
+>
+
           <BikeViewer3D 
             modelPath={currentProduct.modelPath} 
             isMobile={isMobile}
