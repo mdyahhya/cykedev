@@ -66,13 +66,13 @@ const Hero: React.FC = () => {
       />
 
       <div 
-        className="container" 
-        style={{ 
-          position: 'relative', 
-          zIndex: 1,
-          padding: isMobile ? '0 1rem' : '0 2rem'
-        }}
-      >
+  className="container" 
+  style={{ 
+    position: 'relative', 
+    zIndex: 1,
+    padding: isMobile ? '0' : '0 2rem'
+  }}
+>
         
         {/* Main Heading - CYKED EV */}
         <motion.div
@@ -136,17 +136,17 @@ const Hero: React.FC = () => {
 
         {/* 3D Bike Viewer */}
         <motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1, delay: 0.3 }}
   style={{
-    width: '100%',
-    maxWidth: isMobile ? '100%' : '1000px',
+    width: isMobile ? '100vw' : '100%',
+    maxWidth: isMobile ? '100vw' : '1000px',
     height: isMobile ? '400px' : '700px',
-    margin: isMobile ? '0 -1rem 2rem' : '0 auto 3rem', // Negative margin removes side padding
+    margin: isMobile ? '0 0 2rem 0' : '0 auto 3rem',
+    marginLeft: isMobile ? 'calc(-50vw + 50%)' : 'auto',
+    marginRight: isMobile ? 'calc(-50vw + 50%)' : 'auto',
     position: 'relative'
   }}
 >
+
 
           <BikeViewer3D 
             modelPath={currentProduct.modelPath} 
