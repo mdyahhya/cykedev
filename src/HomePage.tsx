@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
           fontWeight: 900,
           padding: '0 1rem'
         }}>
-          Our Electric Bikes
+          Pick Your Shade
         </h2>
         <div style={{ 
           display: 'grid',
