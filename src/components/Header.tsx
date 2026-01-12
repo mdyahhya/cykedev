@@ -82,7 +82,7 @@ const Header: React.FC = () => {
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 >
   <img 
-    src="/cykedev.png"
+    src="/cykedev.png" 
     alt="CYKED Logo" 
     style={{
       width: '100%',
@@ -297,6 +297,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-
-
