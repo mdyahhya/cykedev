@@ -118,7 +118,7 @@ const Header: React.FC = () => {
                     letterSpacing: '0.05em'
                   }}
                 >
-                  Electric Mobility
+                  Electric Bike
                 </p>
               </div>
             </div>
