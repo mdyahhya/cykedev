@@ -268,25 +268,26 @@ scene.add(model);
 
       {/* ADD THIS NEW TEXT BELOW: */}
       {!loading && !error && (
-        <div style={{
-          position: 'absolute',
-          bottom: '5rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          textAlign: 'center',
-          background: 'rgba(30, 58, 138, 0.95)',
-          color: 'white',
-          padding: '0.75rem 2rem',
-          borderRadius: '50px',
-          fontSize: '0.875rem',
-          fontWeight: 600,
-          boxShadow: '0 4px 12px rgba(30, 58, 138, 0.3)',
-          zIndex: 10,
-          whiteSpace: 'nowrap'
-        }}>
-          🔄 Drag to rotate 360° and explore the bike
-        </div>
-      )}
+  <div style={{
+    position: 'absolute',
+    bottom: isMobile ? '3.5rem' : '5rem',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    textAlign: 'center',
+    background: 'rgba(30, 58, 138, 0.95)',
+    color: 'white',
+    padding: isMobile ? '0.5rem 1.5rem' : '0.75rem 2rem',
+    borderRadius: '50px',
+    fontSize: isMobile ? '0.75rem' : '0.875rem',
+    fontWeight: 600,
+    boxShadow: '0 4px 12px rgba(30, 58, 138, 0.3)',
+    zIndex: 10,
+    whiteSpace: 'nowrap'
+  }}>
+    🔄 Drag to rotate 360° and explore the bike
+  </div>
+)}
+
 
       {/* Spin animation */}
       <style>{`
