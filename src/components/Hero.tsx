@@ -27,14 +27,16 @@ const Hero: React.FC = () => {
 
   return (
     <section 
-      className="section"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        background: 'linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%)',
-        position: 'relative',
-        overflow: 'hidden',
+  className="section"
+  style={{
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    background: 'linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%)',
+    position: 'relative',
+    overflow: isMobile ? 'hidden' : 'hidden',
+    paddingLeft: isMobile ? '0' : 'inherit',
+    paddingRight: isMobile ? '0' : 'inherit',
         paddingTop: isMobile ? '1rem' : '2rem',
         paddingBottom: isMobile ? '2rem' : '0'
       }}
@@ -140,12 +142,13 @@ const Hero: React.FC = () => {
     width: isMobile ? '100vw' : '100%',
     maxWidth: isMobile ? '100vw' : '1000px',
     height: isMobile ? '400px' : '700px',
-    margin: isMobile ? '0 0 2rem 0' : '0 auto 3rem',
-    marginLeft: isMobile ? 'calc(-50vw + 50%)' : 'auto',
-    marginRight: isMobile ? 'calc(-50vw + 50%)' : 'auto',
+    margin: '0 auto 2rem',
+    marginLeft: isMobile ? '-1rem' : 'auto',
+    marginRight: isMobile ? '-1rem' : 'auto',
     position: 'relative'
   }}
 >
+
 
 
           <BikeViewer3D 
