@@ -4,6 +4,26 @@
   padding: 2rem;
   text-align: center;
 }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Optimize images and sections */
+img {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+section {
+  will-change: transform;
+  backface-visibility: hidden;
+}
 
 .logo {
   height: 6em;
