@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             {/* Logo & Brand Name */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               {/* Circular C Logo */}
-              <div 
+              {/* <div 
   style={{
     width: '48px',
     height: '48px',
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
       objectFit: 'contain'
     }}
   />
-</div>
+</div> */}
 
               
               {/* Brand Name */}
