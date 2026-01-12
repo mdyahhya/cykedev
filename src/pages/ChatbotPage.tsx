@@ -25,6 +25,7 @@ const ChatbotPage: React.FC = () => {
     currentContext: 'initial'
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const initialized = useRef(false);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -32,16 +33,12 @@ const ChatbotPage: React.FC = () => {
   }, [messages]);
 
   // Initialize chat on mount
- // Initialize chat on mount
-const initialized = useRef(false);
-
-useEffect(() => {
-  if (!initialized.current) {
-    initialized.current = true;
-    handleBotResponse('initial', null);
-  }
-}, []);
-
+  useEffect(() => {
+    if (!initialized.current) {
+      initialized.current = true;
+      handleBotResponse('initial', null);
+    }
+  }, []);
 
   // Chatbot content in multiple languages
   const content = {
@@ -255,23 +252,93 @@ useEffect(() => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      height: '100vh',
-      maxHeight: '100vh',
-      overflow: 'hidden'
+      height: '100%',
+      width: '100%'
     }}>
       {/* Header */}
       <div style={{
         padding: '1.5rem 2rem',
         background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
         color: 'white',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexShrink: 0
       }}>
-        <h1 style={{ margin: 0, fontSize: '1.75rem', fontWeight: '600' }}>
-          🚲 CYKED AI Assistant
-        </h1>
-        <p style={{ margin: '0.5rem 0 0 0', opacity: 0.9, fontSize: '0.95rem' }}>
-          Your e-bike information companion
-        </p>
+        <div>
+          <h1 style={{ margin: 0, fontSize: '1.75rem', fontWeight: '600' }}>
+            🚲 CYKED AI Assistant
+          </h1>
+          <p style={{ margin: '0.5rem 0 0 0', opacity: 0.9, fontSize: '0.95rem' }}>
+            Your e-bike information companion
+          </p>
+        </div>
+
+        {/* Buttons Container */}
+        <div style={{ display: 'flex', gap: '0.75rem', flexShrink: 0 }}>
+          {/* Restart Button */}
+          <button
+            onClick={() => {
+              setMessages([]);
+              setChatState({ language: null, currentContext: 'initial' });
+              setTimeout(() => handleBotResponse('initial', null), 0);
+            }}
+            style={{
+              padding: '0.75rem 1.25rem',
+              background: 'rgba(255, 255, 255, 0.2)',
+              border: '2px solid white',
+              borderRadius: '0.5rem',
+              color: 'white',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              fontSize: '0.9rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'white';
+              e.currentTarget.style.color = '#1E3A8A';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+              e.currentTarget.style.color = 'white';
+            }}
+          >
+            🔄 New Chat
+          </button>
+
+          {/* Close Button */}
+          {/* <button
+            onClick={() => window.history.back()}
+            style={{
+              padding: '0.75rem 1rem',
+              background: 'rgba(255, 255, 255, 0.2)',
+              border: '2px solid white',
+              borderRadius: '0.5rem',
+              color: 'white',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              fontSize: '1.1rem',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#EF4444';
+              e.currentTarget.style.borderColor = '#EF4444';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+              e.currentTarget.style.borderColor = 'white';
+            }}
+            title="Close"
+          >
+            ✕
+          </button> */}
+        </div>
       </div>
 
       {/* Chat Messages Container */}
