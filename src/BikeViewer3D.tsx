@@ -270,7 +270,7 @@ scene.add(model);
       {!loading && !error && (
   <div style={{
     position: 'absolute',
-    bottom: isMobile ? '3.5rem' : '5rem',
+    bottom: isMobile ? '5rem' : '5rem',
     left: '50%',
     transform: 'translateX(-50%)',
     textAlign: 'center',
