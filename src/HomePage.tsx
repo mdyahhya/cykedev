@@ -51,8 +51,6 @@ const HomePage: React.FC = () => {
       <Hero />
       <Dashboard />
       
-      
-      
       {/* Bikes Section - Mobile Responsive */}
       <section id="products" style={{ padding: '4rem 1rem', background: 'white' }}>
         <h2 style={{ 
@@ -77,6 +75,7 @@ const HomePage: React.FC = () => {
           <img 
             src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/redbike.png" 
             alt="Red CYKED Bike" 
+            loading="lazy"
             style={{ 
               width: '100%', 
               height: '350px',
@@ -88,6 +87,7 @@ const HomePage: React.FC = () => {
           <img 
             src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/bluebike.png" 
             alt="Blue CYKED Bike" 
+            loading="lazy"
             style={{ 
               width: '100%', 
               height: '350px',
@@ -99,6 +99,7 @@ const HomePage: React.FC = () => {
           <img 
             src="https://ajapvxdpxifdhvvszuhp.supabase.co/storage/v1/object/public/Cykedev/orangebike.png" 
             alt="Orange CYKED Bike" 
+            loading="lazy"
             style={{ 
               width: '100%', 
               height: '350px',
@@ -134,10 +135,11 @@ const HomePage: React.FC = () => {
           overflow: 'hidden',
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
         }}>
-          {/* Image */}
+          {/* Image - eager loading since it's main hero image */}
           <img 
             src={CUSTOMER_IMAGES[currentImageIndex].src}
             alt={CUSTOMER_IMAGES[currentImageIndex].alt}
+            loading="lazy"
             style={{
               width: '100%',
               height: '500px',
@@ -196,5 +198,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
-
