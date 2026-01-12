@@ -29,10 +29,11 @@ const BikeViewer3D: React.FC<BikeViewer3DProps> = ({ modelPath, isMobile = false
   0.1,
   1000
 );
+
 camera.position.set(
-  isMobile ? 0.6 : 0.5,
-  isMobile ? 0.15 : 0.1,
-  isMobile ? 1.5 : 1
+  isMobile ? 0.7 : 0.5,
+  isMobile ? 0.2 : 0.1,
+  isMobile ? 2.0 : 1
 );
 
 
@@ -192,8 +193,8 @@ scene.add(model);
       )}
 
       {/* Controls Panel - BELOW the bike */}
-      {!loading && !error && (
-        <div style={{
+     {!loading && !error && !isMobile && (
+  <div style={{
           position: 'absolute',
           bottom: '1rem',
           left: '50%',
