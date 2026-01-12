@@ -41,12 +41,13 @@ camera.position.set(
 
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ 
-      antialias: true,
-      alpha: true // Enable transparency
-    });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
-    renderer.shadowMap.enabled = true;
+   const renderer = new THREE.WebGLRenderer({ 
+  antialias: true,
+  alpha: true
+});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // HD quality on mobile
+renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
+renderer.shadowMap.enabled = true;
     mountRef.current.appendChild(renderer.domElement);
 
     // Lights
