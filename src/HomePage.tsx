@@ -14,8 +14,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <Dashboard />
       
-      {/* Bikes Section - Mobile Responsive */}
-<section id="products" style={{ padding: '4rem 1rem', background: 'white' }}>
+     <section id="products" style={{ padding: '4rem 1rem', background: 'white' }}>
   <h2 style={{ 
     textAlign: 'center', 
     color: '#1E3A8A', 
@@ -26,6 +25,7 @@ const HomePage: React.FC = () => {
   }}>
     Our Electric Bikes
   </h2>
+
   <div style={{ 
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 350px))',
@@ -35,9 +35,11 @@ const HomePage: React.FC = () => {
     margin: '0 auto',
     padding: '0 1rem'
   }}>
+
+    {/* Google Drive Image */}
     <img 
-      src="https://drive.google.com/file/d/1FIbATVQW4JWsSkvN60JzF7dcjoOuElvN/view?usp=drivesdk" 
-      alt="Red CYKED Bike" 
+      src="https://drive.google.com/uc?export=view&id=1FIbATVQW4JWsSkvN60JzF7dcjoOuElvN"
+      alt="Red CYKED Bike"
       style={{ 
         width: '100%', 
         height: '350px',
@@ -46,10 +48,11 @@ const HomePage: React.FC = () => {
         boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
       }} 
     />
+
+    {/* Local Image (public folder) */}
     <img 
-      src="bluebike.png" 
-      
-      alt="Blue CYKED Bike" 
+      src="/bluebike.png"
+      alt="Blue CYKED Bike"
       style={{ 
         width: '100%', 
         height: '350px',
@@ -58,9 +61,11 @@ const HomePage: React.FC = () => {
         boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
       }} 
     />
+
+    {/* Local Image */}
     <img 
-      src="/images/orangebike.png" 
-      alt="Orange CYKED Bike" 
+      src="/images/orangebike.png"
+      alt="Orange CYKED Bike"
       style={{ 
         width: '100%', 
         height: '350px',
@@ -81,6 +86,7 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
 
 
 
