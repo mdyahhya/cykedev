@@ -142,22 +142,20 @@ const CustomerSlider: React.FC = () => {
                 background: `linear-gradient(rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.2))`,
                 position: 'relative'
               }}>
-                {/* Image Placeholder - Replace with actual images */}
-                <div style={{
-                  width: '80%',
-                  height: '70%',
-                  background: 'linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)',
-                  borderRadius: '1rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '3rem',
-                  color: '#1E3A8A',
-                  marginBottom: '2rem',
-                  border: '2px solid #3B82F6'
-                }}>
-                  🚴‍♂️
-                </div>
+                {/* Actual Customer Image */}
+<img 
+  src={CUSTOMER_IMAGES[currentIndex].src}
+  alt={CUSTOMER_IMAGES[currentIndex].caption}
+  style={{
+    width: '80%',
+    height: '70%',
+    objectFit: 'cover',
+    borderRadius: '1rem',
+    marginBottom: '2rem',
+    border: '2px solid #3B82F6'
+  }}
+/>
+
 
                 {/* Caption */}
                 <div style={{
