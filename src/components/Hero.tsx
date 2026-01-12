@@ -139,10 +139,10 @@ const Hero: React.FC = () => {
         {/* 3D Bike Viewer */}
         <motion.div
   style={{
-    width: isMobile ? 'calc(100vw - 2rem)' : '100%',
-    maxWidth: isMobile ? 'calc(100vw - 2rem)' : '1000px',
+    width: isMobile ? 'calc(100vw - 1rem)' : '100%',
+    maxWidth: isMobile ? 'calc(100vw - 1rem)' : '1000px',
     height: isMobile ? '400px' : '700px',
-    margin: isMobile ? '0 1rem 2rem' : '0 auto 3rem',
+    margin: isMobile ? '0 0.5rem 2rem' : '0 auto 3rem',
     position: 'relative'
   }}
 >
