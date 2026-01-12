@@ -332,7 +332,7 @@ export const PRODUCTS: Record<ProductType, Product> = {
     price: '₹11,900',
     priceUSD: 'US$ 9,900 (MOQ: 7 pieces)',
     moq: 7,
-    modelPath: '/models/redbike.glb', // Can use same for now or add kit model later
+    modelPath: '/models/redbike.glb',
     specifications: KIT_SPECS,
     features: [
       'Easy DIY installation',
